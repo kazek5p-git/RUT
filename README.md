@@ -1,23 +1,35 @@
 # RUT
 
-RUT - Radio Updater and Tools dla OpenGD77, UV390 i Retevis RT3S.
+RUT - Radio Updater and Tools dla OpenGD77, UV390, Retevis RT3S i narzędzi pomocniczych do kanałów oraz udźwiękowienia.
 
-Obs?ugiwane w GUI:
-- TYT UV390 Plus 10W (OpenGD77)
-- Retevis RT3S bez GPS (OpenGD77)
-- Retevis RT3S GPS (OpenGD77)
-- Quansheng UV-K5 / UV-K6
-- Baofeng / PMR jako narz?dzia kana??w
-- Backup radia: odczyt codepluga OpenGD77 `.g77` do `backups\radio` oraz instrukcja zachowania fabrycznej kalibracji RT3S przez CPS producenta
+## Najpierw przeczytaj
 
-Najprostsza instalacja:
-1. Wejd? w najnowszy release.
-2. Pobierz `RUT.zip`.
-3. Rozpakuj ZIP do w?asnego folderu.
-4. Uruchom `start_RUT.vbs` albo `RUT.ps1`.
+Pełna dokumentacja offline jest w folderze:
 
-Najnowszy ZIP jest te? pod sta?ym linkiem:
-https://github.com/kazek5p-git/RUT/releases/latest/download/RUT.zip
+`docs\README.md`
 
-Manifest aktualizacji:
-https://github.com/kazek5p-git/RUT/releases/latest/download/latest.json
+Najważniejsze rozdziały:
+
+- `docs\01-szybki-start.md` - instalacja i pierwsze uruchomienie.
+- `docs\03-obslugiwane-radia.md` - wybór profilu radia.
+- `docs\04-backup-i-bezpieczenstwo.md` - backup codepluga i RT3S.
+- `docs\05-opengd77-flash-dmr.md` - DFU, OpenGD77, RT3S i DMR + flash.
+- `docs\06-kanaly-dmr.md` - import przemienników i DMR ID.
+- `docs\07-udzwiekowienie.md` - pakiety głosowe VPR.
+- `docs\08-rozwiazywanie-problemow.md` - typowe błędy i naprawy.
+
+## Uruchomienie
+
+Najprościej uruchom:
+
+`start_RUT.vbs`
+
+Możesz też uruchomić bezpośrednio:
+
+`RUT.ps1`
+
+## Najnowszy release
+
+- ZIP: https://github.com/kazek5p-git/RUT/releases/latest/download/RUT.zip
+- Manifest: https://github.com/kazek5p-git/RUT/releases/latest/download/latest.json
+- Strona release: https://github.com/kazek5p-git/RUT/releases/latest
