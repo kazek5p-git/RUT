@@ -8,6 +8,7 @@ Obs?ugiwane w GUI:
 - Retevis RT3S GPS (OpenGD77)
 - Quansheng UV-K5 / UV-K6
 - Baofeng / PMR jako narz?dzia kana??w
+- Backup radia: odczyt codepluga OpenGD77 `.g77` do `backups\radio` oraz instrukcja zachowania fabrycznej kalibracji RT3S przez CPS producenta
 
 Najprostsza instalacja:
 1. Wejd? w najnowszy release.
