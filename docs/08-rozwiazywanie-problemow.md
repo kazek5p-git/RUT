@@ -113,3 +113,24 @@ Najcz?stsze przyczyny natychmiastowego zamkni?cia:
 - Brakuje PowerShella albo jest uszkodzony.
 - Brakuje pliku `RUT.ps1`, bo paczka zosta?a rozpakowana niepe?nie.
 - Skrypt zatrzyma? si? na b??dzie sk?adni albo brakuj?cym komponencie .NET/Windows Forms.
+
+## Podejrzenie brakuj?cych sk?adnik?w
+
+Uruchom:
+
+`start_RUT_diagnose.cmd`
+
+Ten plik nie uruchamia GUI. Sprawdza sk?adniki potrzebne do startu i wybrane sk?adniki opcjonalne. Wynik zapisuje do:
+
+`logs\RUT_components_YYYYMMDD_HHMMSS.txt`
+
+W logu zobaczysz pozycje `OK`, `WARN` i `FAIL`. Najwa?niejsze dla samego startu s?:
+
+- `powershell.exe`,
+- `System.Windows.Forms`,
+- `System.Drawing`,
+- `RUT.ps1`,
+- `program_update_config.json`,
+- rozpakowane foldery `docs`, `assets`, `dist` i `tools`.
+
+Pozycje opcjonalne, takie jak Python, `pyusb`, OpenGD77 CPS i plik kodeka DMR, mog? mie? `WARN`. To nie musi blokowa? startu GUI, ale mo?e blokowa? konkretne funkcje, na przyk?ad `DMR + flash` albo zapis codepluga.

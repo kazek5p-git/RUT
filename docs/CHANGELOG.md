@@ -1,5 +1,11 @@
 # Historia zmian dokumentacji
 
+## 2026.05.17.6
+
+- Dodano `start_RUT_diagnose.cmd` do sprawdzania brakuj?cych sk?adnik?w.
+- Dodano `tools\diagnostics\Test-RUT-Components.ps1`.
+- Diagnostyka zapisuje wynik do `logs\RUT_components_*.txt` i rozr??nia `OK`, `WARN` oraz `FAIL`.
+
 ## 2026.05.17.5
 
 - Dodano diagnostyczne logi startu jako zwyk?e pliki `.txt`.

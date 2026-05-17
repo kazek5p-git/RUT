@@ -56,6 +56,7 @@ ZIP powinien zawierać między innymi:
 - `RUT.ps1`,
 - launchery `.vbs`,
 - `start_RUT_debug.cmd`,
+- `start_RUT_diagnose.cmd`,
 - `program_update_config.json`,
 - `README_GUI_RUN.txt`,
 - `docs`,

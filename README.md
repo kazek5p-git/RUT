@@ -36,3 +36,7 @@ Możesz też uruchomić bezpośrednio:
 ## Gdy program zamyka si? od razu
 
 Uruchom `start_RUT_debug.cmd`. Program zostawi otwarte okno i zapisze pliki tekstowe w `logs`. Najpierw sprawd? `logs\RUT_last_start.txt`, bo wskazuje konkretne pliki do wys?ania.
+
+## Sprawdzenie brakuj?cych sk?adnik?w
+
+Uruchom `start_RUT_diagnose.cmd`. Ten plik nie uruchamia GUI, tylko sprawdza sk?adniki i zapisuje wynik do `logs\RUT_components_*.txt`.
