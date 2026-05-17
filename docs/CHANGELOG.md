@@ -1,5 +1,10 @@
 # Historia zmian dokumentacji
 
+## 2026.05.17.7
+
+- Naprawiono b??d startu: funkcje pomocnicze profili OpenGD77 by?y omy?kowo zagnie?d?one w `Refresh-RadioProfilesCombo` przed blokiem `param`.
+- Objaw b??du: program zamyka? si? natychmiast, a log zawiera? `The term 'param' is not recognized` przy `Refresh-RadioProfilesCombo`.
+
 ## 2026.05.17.6
 
 - Dodano `start_RUT_diagnose.cmd` do sprawdzania brakuj?cych sk?adnik?w.
