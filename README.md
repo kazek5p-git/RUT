@@ -33,3 +33,6 @@ Możesz też uruchomić bezpośrednio:
 - ZIP: https://github.com/kazek5p-git/RUT/releases/latest/download/RUT.zip
 - Manifest: https://github.com/kazek5p-git/RUT/releases/latest/download/latest.json
 - Strona release: https://github.com/kazek5p-git/RUT/releases/latest
+## Gdy program zamyka si? od razu
+
+Uruchom `start_RUT_debug.cmd`. Program zostawi otwarte okno i zapisze pliki tekstowe w `logs`. Najpierw sprawd? `logs\RUT_last_start.txt`, bo wskazuje konkretne pliki do wys?ania.

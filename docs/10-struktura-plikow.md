@@ -5,6 +5,7 @@ Ten rozdział opisuje najważniejsze foldery i pliki w instalacji RUT.
 ## Pliki startowe
 
 - `start_RUT.vbs` - najprostszy launcher bez widocznej konsoli.
+- `start_RUT_debug.cmd` - launcher diagnostyczny, zostawia okno i zapisuje pliki `.txt` w `logs`.
 - `RUT.ps1` - główny program GUI.
 - `radio_updater_and_tools.ps1` - alias zgodności uruchamiający RUT.
 - `OpenGD77_UV390_A11y.ps1` - alias zgodności uruchamiający RUT.

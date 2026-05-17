@@ -73,7 +73,7 @@ Jeśli radio uruchamia się, ale funkcje nie działają:
 
 RUT zapisuje logi w:
 
-`logs\RUT_YYYYMMDD_HHMMSS.log`
+`logs\RUT_YYYYMMDD_HHMMSS.txt`
 
 W razie problemu najważniejsze są:
 
@@ -91,3 +91,25 @@ Najlepiej wysłać:
 - nazwę operacji, którą uruchomiono,
 - informację, czy Windows widzi DFU albo COM,
 - wersję RUT z manifestu lub release.
+## Program zamyka si? od razu po uruchomieniu
+
+Najpierw uruchom:
+
+`start_RUT_debug.cmd`
+
+Ten plik zostawia widoczne okno i zapisuje diagnostyk? do zwyk?ych plik?w tekstowych `.txt` w folderze `logs`. Po takim uruchomieniu wy?lij albo sprawd?:
+
+- `logs\RUT_last_start.txt` - kr?tka informacja, kt?re pliki s? z ostatniego startu.
+- `logs\RUT_launcher_YYYYMMDD_HHMMSS.txt` - log launchera VBS.
+- `logs\RUT_powershell_YYYYMMDD_HHMMSS.txt` - b??dy z PowerShella, je?li RUT.ps1 nie wystartowa?.
+- `logs\RUT_last_log.txt` - wskazuje g??wny log RUT, je?li skrypt zd??y? wystartowa?.
+- `logs\RUT_YYYYMMDD_HHMMSS.txt` - g??wny log programu.
+
+Najcz?stsze przyczyny natychmiastowego zamkni?cia:
+
+- ZIP nie zosta? rozpakowany, tylko program uruchomiono ze ?rodka archiwum.
+- Windows zablokowa? pliki pobrane z internetu.
+- Antywirus albo polityka firmowa blokuje `.vbs` lub PowerShell.
+- Brakuje PowerShella albo jest uszkodzony.
+- Brakuje pliku `RUT.ps1`, bo paczka zosta?a rozpakowana niepe?nie.
+- Skrypt zatrzyma? si? na b??dzie sk?adni albo brakuj?cym komponencie .NET/Windows Forms.

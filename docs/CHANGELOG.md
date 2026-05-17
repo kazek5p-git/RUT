@@ -1,5 +1,12 @@
 # Historia zmian dokumentacji
 
+## 2026.05.17.5
+
+- Dodano diagnostyczne logi startu jako zwyk?e pliki `.txt`.
+- Launcher `start_RUT.vbs` tworzy `logs\RUT_last_start.txt`, `logs\RUT_launcher_*.txt` i `logs\RUT_powershell_*.txt`.
+- Dodano `start_RUT_debug.cmd`, kt?ry zostawia okno konsoli i zapisuje log tekstowy, gdy program zamyka si? od razu.
+- G??wny log RUT ma teraz rozszerzenie `.txt`, a `logs\RUT_last_log.txt` wskazuje ostatni g??wny log.
+
 ## 2026.05.17.4
 
 - Dodano pełną dokumentację offline w folderze `docs`.
