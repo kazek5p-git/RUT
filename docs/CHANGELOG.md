@@ -1,5 +1,10 @@
 # Historia zmian dokumentacji
 
+## 2026.05.17.8
+
+- Naprawiono auto-check aktualizacji programu dla manifestu pobieranego z GitHuba jako bajty application/octet-stream.
+- RUT dekoduje teraz tresc latest.json jako UTF-8 przed ConvertFrom-Json.
+
 ## 2026.05.17.7
 
 - Naprawiono b??d startu: funkcje pomocnicze profili OpenGD77 by?y omy?kowo zagnie?d?one w `Refresh-RadioProfilesCombo` przed blokiem `param`.
