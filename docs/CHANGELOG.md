@@ -1,5 +1,11 @@
 # Historia zmian dokumentacji
 
+## 2026.05.18.5
+
+- Dodano własny dostępny kontroler zakładek dla RUT. NVDA nie widzi już 10 elementów w natywnym `TabControl` WinForms.
+- Dostępne nazwy zakładek zawierają numer, na przykład `Kanały. Zakładka 2 z 5`.
+- Poprawkę zweryfikowano w podglądzie mowy NVDA.
+
 ## 2026.05.18.4
 
 - Poprawiono dostępność zakładek: RUT nie nadaje już stronom zakładek dodatkowej roli `PageTab`, bo NVDA liczył wtedy 5 natywnych zakładek plus 5 stron, czyli `1 z 10`.
