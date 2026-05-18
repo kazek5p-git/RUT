@@ -1,5 +1,9 @@
 # Historia zmian dokumentacji
 
+## 2026.05.18.3
+
+- RUT pobiera manifest aktualizacji z parametrem anty-cache, żeby Windows PowerShell nie używał starego `latest.json`.
+- Skrypt release obsługuje osobny `PackageBaseUrl`, dzięki czemu manifest może wskazywać assety z konkretnego taga, a konfiguracja programu nadal sprawdza ruchomy `latest`.
 ## 2026.05.18.2
 
 - Główne okno RUT podzielono na zakładki: Radio, Kanały, Firmware i głos, Status i log oraz Program.

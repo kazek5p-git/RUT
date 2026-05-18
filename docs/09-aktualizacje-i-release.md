@@ -13,11 +13,12 @@ Manifest zawiera:
 - wersję,
 - URL paczki ZIP,
 - opcjonalny URL jednoplikowego `RUT.exe`,
+- adresy assetów najlepiej z konkretnego taga release, a nie z ruchomego `latest`,
 - SHA256,
 - rozmiar pliku,
 - datę wydania.
 
-RUT porównuje wersję lokalną z wersją zdalną i pobiera ZIP, jeśli jest nowszy.
+RUT porównuje wersję lokalną z wersją zdalną i pobiera ZIP, jeśli jest nowszy. Przy pobieraniu manifestu dodaje parametr anty-cache, żeby Windows PowerShell nie użył starego `latest.json`.
 
 ## Auto-check przy starcie
 
@@ -39,7 +40,7 @@ Jeśli jest ustawiona na `true`, RUT sprawdza aktualizację po starcie.
 Skrypt budujący:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\build_program_update_release.ps1 -Version 2026.05.18.2 -BaseUrl https://github.com/kazek5p-git/RUT/releases/latest/download -BuildOneFileExe
+powershell -ExecutionPolicy Bypass -File .\build_program_update_release.ps1 -Version 2026.05.18.3 -BaseUrl https://github.com/kazek5p-git/RUT/releases/latest/download -PackageBaseUrl https://github.com/kazek5p-git/RUT/releases/download/v2026.05.18.3 -BuildOneFileExe
 ```
 
 Wyniki trafiają do:
