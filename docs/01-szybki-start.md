@@ -10,6 +10,14 @@ Ten rozdział opisuje najkrótszą bezpieczną drogę od pobrania RUT do pierwsz
 - Dla funkcji OpenGD77 CPS: zainstalowany OpenGD77 CPS, jeśli chcesz używać operacji wymagających pliku `DefaultOpenGD77.g77`.
 - Dla funkcji DMR + flash: Python z biblioteką `pyusb`, jeśli używany jest helper `tools\opengd77_dmr`. Zwykły backend UV390 jest spakowany jako EXE i nie wymaga Pythona.
 
+## Instalacja z jednego pliku EXE
+
+1. Pobierz `RUT.exe` z najnowszego release:
+   https://github.com/kazek5p-git/RUT/releases/latest/download/RUT.exe
+2. Uruchom `RUT.exe`.
+3. Program sam rozpakowuje swoją paczkę do `%LOCALAPPDATA%\RUT\onefile\<wersja>` i startuje właściwe GUI.
+4. To jest najwygodniejszy wariant dla osoby, która nie chce rozpakowywać ZIP-a ręcznie.
+
 ## Instalacja z ZIP
 
 1. Pobierz `RUT.zip` z najnowszego release:
@@ -21,7 +29,7 @@ Ten rozdział opisuje najkrótszą bezpieczną drogę od pobrania RUT do pierwsz
 
 ## Pierwsze uruchomienie
 
-Po starcie RUT pokazuje główne okno z natywnymi kontrolkami Windows. Najważniejsze pola:
+Po starcie RUT pokazuje główne okno z natywnymi kontrolkami Windows i zakładkami. Kursor czytnika ekranu trafia na pasek zakładek. Najważniejsze pola:
 
 - `Model radia` - wybór profilu radia.
 - `DMR ID` - numer DMR używany przy generowaniu kanałów DMR.

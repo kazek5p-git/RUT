@@ -2,6 +2,13 @@
 
 Ten rozdział opisuje najważniejsze foldery i pliki w instalacji RUT.
 
+## Jednoplikowy EXE
+
+- `RUT.exe` z release GitHub jest samorozpakowującym wariantem programu.
+- Po uruchomieniu rozpakowuje bieżącą wersję do `%LOCALAPPDATA%\RUT\onefile\<wersja>`.
+- W rozpakowanym folderze są te same pliki, które zawiera `RUT.zip`, w tym `RUT.ps1`, backend, firmware, narzędzia DMR i dokumentacja.
+- Zmienna środowiskowa `RUT_ONEFILE_EXTRACT_DIR` może awaryjnie wskazać inny katalog rozpakowania.
+
 ## Pliki startowe
 
 - `start_RUT.vbs` - najprostszy launcher bez widocznej konsoli.
@@ -44,7 +51,8 @@ Ten rozdział opisuje najważniejsze foldery i pliki w instalacji RUT.
 ## Release
 
 - `dist\program_updater_release\<wersja>` - lokalnie zbudowany release.
-- `dist\program_updater_release\<wersja>\RUT.zip` - paczka do publikacji.
+- `dist\program_updater_release\<wersja>\RUT.zip` - paczka do publikacji i autoaktualizacji.
+- `dist\program_updater_release\<wersja>\RUT.exe` - jednoplikowy samorozpakowujący wariant programu.
 - `dist\program_updater_release\<wersja>\latest.json` - manifest aktualizacji.
 
 ## Czego nie kasować pochopnie

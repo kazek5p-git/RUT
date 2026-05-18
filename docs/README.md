@@ -38,6 +38,7 @@ Ten folder jest dokumentacją offline. Można go czytać w Notatniku, Visual Stu
 ## Linki
 
 - Najnowszy release RUT: https://github.com/kazek5p-git/RUT/releases/latest
+- Stały link do EXE: https://github.com/kazek5p-git/RUT/releases/latest/download/RUT.exe
 - Stały link do ZIP: https://github.com/kazek5p-git/RUT/releases/latest/download/RUT.zip
 - Manifest aktualizacji: https://github.com/kazek5p-git/RUT/releases/latest/download/latest.json
 - OpenGD77: https://www.opengd77.com/

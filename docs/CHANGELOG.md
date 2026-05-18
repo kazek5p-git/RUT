@@ -1,5 +1,12 @@
 # Historia zmian dokumentacji
 
+## 2026.05.18.2
+
+- Główne okno RUT podzielono na zakładki: Radio, Kanały, Firmware i głos, Status i log oraz Program.
+- Fokus po starcie trafia na pasek zakładek, a nazwy dostępności zawierają numer, na przykład `Radio. Zakładka 1 z 5`.
+- Dodano budowanie jednoplikowego `RUT.exe`, który ma w środku paczkę RUT i sam rozpakowuje się do `%LOCALAPPDATA%\RUT\onefile\<wersja>`.
+- Manifest release może zawierać pola `onefile_url`, `onefile_sha256` i `onefile_file_size`.
+
 ## 2026.05.18.1
 
 - Usunięto zaszytą ścieżkę do kodeka DMR z profilu `C:\Users\Kazek`.

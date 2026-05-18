@@ -12,6 +12,7 @@ Manifest zawiera:
 
 - wersję,
 - URL paczki ZIP,
+- opcjonalny URL jednoplikowego `RUT.exe`,
 - SHA256,
 - rozmiar pliku,
 - datę wydania.
@@ -28,6 +29,7 @@ Jeśli jest ustawiona na `true`, RUT sprawdza aktualizację po starcie.
 
 ## Stałe linki GitHub
 
+- Najnowszy EXE: `https://github.com/kazek5p-git/RUT/releases/latest/download/RUT.exe`
 - Najnowszy ZIP: `https://github.com/kazek5p-git/RUT/releases/latest/download/RUT.zip`
 - Manifest: `https://github.com/kazek5p-git/RUT/releases/latest/download/latest.json`
 - Strona release: `https://github.com/kazek5p-git/RUT/releases/latest`
@@ -37,7 +39,7 @@ Jeśli jest ustawiona na `true`, RUT sprawdza aktualizację po starcie.
 Skrypt budujący:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\build_program_update_release.ps1 -Version 2026.05.17.4 -BaseUrl https://github.com/kazek5p-git/RUT/releases/latest/download
+powershell -ExecutionPolicy Bypass -File .\build_program_update_release.ps1 -Version 2026.05.18.2 -BaseUrl https://github.com/kazek5p-git/RUT/releases/latest/download -BuildOneFileExe
 ```
 
 Wyniki trafiają do:
@@ -47,6 +49,7 @@ Wyniki trafiają do:
 Najważniejsze pliki:
 
 - `RUT.zip`,
+- `RUT.exe`,
 - `latest.json`.
 
 ## Co powinno wejść do ZIP
@@ -77,6 +80,7 @@ Release publikuje się jako tag, na przykład:
 Do release trzeba dołączyć:
 
 - `RUT.zip`,
+- `RUT.exe`,
 - `latest.json`.
 
-Po publikacji trzeba sprawdzić, czy link `releases/latest/download/RUT.zip` prowadzi do nowego tagu.
+Po publikacji trzeba sprawdzić, czy linki `releases/latest/download/RUT.exe`, `releases/latest/download/RUT.zip` i `releases/latest/download/latest.json` prowadzą do nowego tagu.

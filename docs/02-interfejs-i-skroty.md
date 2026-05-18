@@ -2,6 +2,18 @@
 
 RUT używa natywnych kontrolek Windows Forms. Dzięki temu program jest czytelny dla NVDA i innych czytników ekranu.
 
+## Zakładki
+
+Główne okno jest podzielone na pięć zakładek:
+
+- `Radio` - profil radia, timeout DFU, język, DMR ID, sprawdzanie wersji, start aktualizacji i backup radia.
+- `Kanały` - import kanałów z pliku, import przemienników z internetu i zapis kanałów do radia.
+- `Firmware i głos` - wgrywanie pakietu głosowego oraz funkcja `DMR + flash`.
+- `Status i log` - bieżący status, ostatni komunikat i pełny log pracy.
+- `Program` - aktualizacja RUT, zamknięcie programu i skróty.
+
+Po uruchomieniu fokus trafia na pasek zakładek. Czytnik ekranu dostaje też nazwę z numerem, na przykład `Radio. Zakładka 1 z 5`.
+
 ## Główne kontrolki
 
 - `Tylko sprawdź wersję` - dla profili obsługiwanych przez backend, sprawdza wersję bez flashowania.
@@ -36,9 +48,9 @@ RUT używa natywnych kontrolek Windows Forms. Dzięki temu program jest czytelny
 - `Alt+V` - Udźwiękowienie.
 - `Alt+M` - DMR + flash.
 - `Alt+B` - Backup radia.
-- `Alt+R` - fokus na model radia.
-- `Alt+L` - fokus na log.
-- `Alt+D` - fokus na timeout DFU.
+- `Alt+R` - przejdź na zakładkę `Radio` i ustaw fokus na model radia.
+- `Alt+L` - przejdź na zakładkę `Status i log` i ustaw fokus na log.
+- `Alt+D` - przejdź na zakładkę `Radio` i ustaw fokus na timeout DFU.
 - `F1` - krótka pomoc w programie.
 - `Alt+F4` - zamknięcie programu z potwierdzeniem.
 
