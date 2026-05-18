@@ -142,3 +142,17 @@ Jeżeli pojawia się błąd podobny do:
 `Nie znaleziono skryptu naprawy sterownika: ...\tools\driver\elevate_install_winusb_dfu.ps1`
 
 to używana paczka RUT jest niepełna albo zbyt stara. Pobierz najnowszy jedno-plikowy `RUT.exe` z GitHuba i uruchom go ponownie. Od wersji `2026.05.18.6` folder `tools\driver` jest częścią paczki release, a diagnostyka sprawdza jego obecność.
+
+## Okno PowerShell naprawy sterownika jest puste albo znika
+
+W wersjach starszych niż `2026.05.18.7` skrypt naprawy DFU mógł zamknąć okno zbyt szybko i nie uruchamiał Zadiga jako widocznego fallbacku. Pobierz najnowszy `RUT.exe` i spróbuj ponownie.
+
+Od wersji `2026.05.18.7` okno naprawy:
+
+- pokazuje kolejne kroki w konsoli,
+- zapisuje log do `logs\driver_install_YYYYMMDD_HHMMSS.txt`,
+- sprawdza DFU `USB\VID_0483&PID_DF11` oraz `USB\VID_1FC9&PID_0094`,
+- próbuje `pnputil` i pakietowego instalatora libwdi,
+- jeśli automatyka nie wystarczy, otwiera `zadig-2.9.exe`.
+
+W Zadig wybierz `Options > List All Devices`, potem urządzenie DFU/STM32/OpenGD77/Retevis, ustaw sterownik `WinUSB` i kliknij `Install Driver` albo `Replace Driver`. Po zamknięciu Zadiga skrypt sprawdzi sterownik jeszcze raz.

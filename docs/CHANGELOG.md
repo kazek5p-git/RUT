@@ -1,10 +1,18 @@
 # Historia zmian dokumentacji
 
+## 2026.05.18.7
+
+- Przepisano skrypt naprawy sterownika DFU WinUSB: okno PowerShell pokazuje teraz postęp, zapisuje log i nie zamyka się od razu przy błędzie.
+- Dodano obsługę identyfikatorów DFU `USB\VID_0483&PID_DF11` oraz `USB\VID_1FC9&PID_0094`.
+- Dodano kolejne metody naprawy: `pnputil`, pakietowy instalator libwdi i awaryjne otwarcie `zadig-2.9.exe` z instrukcją wyboru WinUSB.
+- Diagnostyka i build release sprawdzają teraz obecność `zadig-2.9.exe` oraz `installer_x64.exe`.
+
 ## 2026.05.18.6
 
 - Do paczki release dodano `tools\driver`, czyli skrypt naprawy sterownika DFU WinUSB oraz pliki INF używane przy automatycznej naprawie.
 - Skrypt budowania release przerywa pracę, jeśli w paczce brakuje krytycznych plików, w tym `tools\driver\elevate_install_winusb_dfu.ps1`.
 - Diagnostyka `start_RUT_diagnose.cmd` sprawdza teraz obecność skryptu naprawy DFU i pliku `usb_device.inf`.
+
 ## 2026.05.18.5
 
 - Dodano własny dostępny kontroler zakładek dla RUT. NVDA nie widzi już 10 elementów w natywnym `TabControl` WinForms.
@@ -15,10 +23,12 @@
 
 - Poprawiono dostępność zakładek: RUT nie nadaje już stronom zakładek dodatkowej roli `PageTab`, bo NVDA liczył wtedy 5 natywnych zakładek plus 5 stron, czyli `1 z 10`.
 - Numerowanie zakładek zostaje po stronie natywnego kontrolera Windows, dzięki czemu powinno być `1 z 5`.
+
 ## 2026.05.18.3
 
 - RUT pobiera manifest aktualizacji z parametrem anty-cache, żeby Windows PowerShell nie używał starego `latest.json`.
 - Skrypt release obsługuje osobny `PackageBaseUrl`, dzięki czemu manifest może wskazywać assety z konkretnego taga, a konfiguracja programu nadal sprawdza ruchomy `latest`.
+
 ## 2026.05.18.2
 
 - Główne okno RUT podzielono na zakładki: Radio, Kanały, Firmware i głos, Status i log oraz Program.
@@ -32,6 +42,7 @@
 - Kodek DMR jest teraz pakowany w `tools\opengd77_dmr\resources` i RUT szuka go w katalogu programu.
 - Diagnostyka komponentów sprawdza kodek DMR w paczce RUT, a nie w prywatnym katalogu Telegrama.
 - Usunięto twarde `D:\` z wyboru referencyjnego pliku promptów głosowych.
+
 ## 2026.05.17.8
 
 - Naprawiono auto-check aktualizacji programu dla manifestu pobieranego z GitHuba jako bajty application/octet-stream.
