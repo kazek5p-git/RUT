@@ -8,7 +8,7 @@ Ten rozdział opisuje najkrótszą bezpieczną drogę od pobrania RUT do pierwsz
 - Konto użytkownika z możliwością uruchamiania PowerShella.
 - Kabel USB do radia.
 - Dla funkcji OpenGD77 CPS: zainstalowany OpenGD77 CPS, jeśli chcesz używać operacji wymagających pliku `DefaultOpenGD77.g77`.
-- Dla funkcji DMR + flash: Python z biblioteką `pyusb`, jeśli używany jest helper `tools\opengd77_dmr`. Zwykły backend UV390 jest spakowany jako EXE i nie wymaga Pythona.
+- Dla funkcji DMR + flash: od wersji `2026.05.18.9` RUT ma wbudowany loader EXE i nie wymaga instalowania Pythona ani `pyusb`. Python jest tylko awaryjnym fallbackiem deweloperskim.
 
 ## Instalacja z jednego pliku EXE
 

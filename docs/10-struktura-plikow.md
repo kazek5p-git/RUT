@@ -37,7 +37,7 @@ Ten rozdział opisuje najważniejsze foldery i pliki w instalacji RUT.
 - `dist\firmware_extracted\OpenMDUV380_10W_PLUS.bin` - firmware dla UV390 Plus 10W.
 - `dist\firmware_extracted\OpenMDUV380.bin` - firmware dla RT3S/MDUV380.
 - `tools\opengd77_dmr\Run_OpenGD77_DMR_Flash.ps1` - helper DMR + flash.
-- `tools\opengd77_dmr\opengd77_stm32_firmware_loader.py` - loader OpenGD77 STM32.
+- `tools\opengd77_dmr\OpenGD77_STM32_FW_Loader.exe` - wbudowany loader OpenGD77 STM32 dla DMR + flash, bez wymagania Pythona.`n- `tools\opengd77_dmr\opengd77_stm32_firmware_loader.py` - źródłowy loader OpenGD77 STM32 używany jako fallback/dewelopersko.
 - `tools\opengd77_dmr\libusb-1.0.dll` - biblioteka USB dla helpera.
 
 ## Dane robocze

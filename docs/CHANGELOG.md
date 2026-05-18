@@ -1,5 +1,11 @@
 # Historia zmian dokumentacji
 
+## 2026.05.18.9
+
+- Dodano wbudowany `OpenGD77_STM32_FW_Loader.exe` dla funkcji `DMR + flash`, zbudowany z loadera OpenGD77 i spakowany z `pyusb`.
+- `Run_OpenGD77_DMR_Flash.ps1` najpierw używa wbudowanego EXE, więc użytkownik nie musi instalować Pythona ani `pyusb`.
+- Python zostaje tylko jako fallback deweloperski, gdy wbudowany EXE nie istnieje.
+- Diagnostyka sprawdza wbudowany loader EXE i nie zgłasza braku Pythona jako problemu, jeśli loader działa.
 ## 2026.05.18.8
 
 - Dodano automatyczne wymuszanie przypięcia WinUSB przez Windowsowe `newdev.dll` (`UpdateDriverForPlugAndPlayDevices`) przed awaryjnym uruchomieniem Zadiga.

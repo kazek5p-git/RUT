@@ -25,7 +25,7 @@ Możliwe przyczyny:
 - zły sterownik DFU,
 - zajęte urządzenie USB,
 - niezgodny plik firmware,
-- brak Pythona lub `pyusb` w ścieżce DMR + flash,
+- brak wbudowanego loadera `OpenGD77_STM32_FW_Loader.exe` albo, w starszych wersjach, brak Pythona lub `pyusb`,
 - przerwanie połączenia USB.
 
 Działania:
@@ -133,7 +133,7 @@ W logu zobaczysz pozycje `OK`, `WARN` i `FAIL`. Najwa?niejsze dla samego startu 
 - `program_update_config.json`,
 - rozpakowane foldery `docs`, `assets`, `dist` i `tools`.
 
-Pozycje opcjonalne, takie jak Python, `pyusb`, OpenGD77 CPS i plik kodeka DMR, mog? mie? `WARN`. To nie musi blokowa? startu GUI, ale mo?e blokowa? konkretne funkcje, na przyk?ad `DMR + flash` albo zapis codepluga.
+Pozycje opcjonalne, takie jak Python, OpenGD77 CPS i plik kodeka DMR, mogą mieć `WARN`. Od wersji `2026.05.18.9` Python nie jest wymagany do `DMR + flash`, jeśli działa wbudowany `OpenGD77_STM32_FW_Loader.exe`.
 
 ## Nie znaleziono skryptu naprawy sterownika
 
@@ -156,3 +156,7 @@ Od wersji `2026.05.18.7` okno naprawy:
 - jeśli automatyka nie wystarczy, otwiera `zadig-2.9.exe`.
 
 W wersji `2026.05.18.8` RUT przed Zadigiem próbuje jeszcze wymusić sterownik przez systemowe `UpdateDriverForPlugAndPlayDevices`, więc w wielu przypadkach użytkownik nie musi nic klikać ręcznie.`n`nW Zadig wybierz `Options > List All Devices`, potem urządzenie DFU/STM32/OpenGD77/Retevis, ustaw sterownik `WinUSB` i kliknij `Install Driver` albo `Replace Driver`. Po zamknięciu Zadiga skrypt sprawdzi sterownik jeszcze raz.
+
+## Błąd: Nie znaleziono Pythona z biblioteka pyusb
+
+Ten błąd dotyczy wersji starszych niż `2026.05.18.9` albo niepełnej paczki bez `tools\opengd77_dmr\OpenGD77_STM32_FW_Loader.exe`. Pobierz najnowszy jedno-plikowy `RUT.exe`. Aktualny RUT używa wbudowanego loadera EXE i nie wymaga instalowania Pythona.

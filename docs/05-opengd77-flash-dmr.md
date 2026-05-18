@@ -62,23 +62,19 @@ Nie używaj ścieżek z komputera osoby, która budowała paczkę. Awaryjnie mo�
 
 Helper sprawdza SHA256 pliku kodeka. Jeżeli plik jest inny, operacja zostanie przerwana.
 
-## Python i pyusb
+## Wbudowany loader OpenGD77
 
-Ścieżka `DMR + flash` używa helpera:
+Od wersji `2026.05.18.9` ścieżka `DMR + flash` używa wbudowanego pliku:
+
+`tools\opengd77_dmr\OpenGD77_STM32_FW_Loader.exe`
+
+Ten plik jest zbudowany z loadera OpenGD77 i ma spakowane zależności Pythona, w tym `pyusb`. Użytkownik nie musi instalować Pythona ani wykonywać `pip install pyusb`.
+
+Helper:
 
 `tools\opengd77_dmr\Run_OpenGD77_DMR_Flash.ps1`
 
-Ten helper szuka `python.exe` albo `py.exe` z biblioteką `pyusb`. Jeżeli pojawi się błąd o braku Pythona lub `pyusb`, zainstaluj Python 3 i wykonaj:
-
-```powershell
-py -3 -m pip install pyusb
-```
-
-albo:
-
-```powershell
-python -m pip install pyusb
-```
+najpierw uruchamia wbudowany EXE. Dopiero jeśli tego pliku nie ma, próbuje awaryjnie znaleźć lokalny `python.exe` albo `py.exe` z biblioteką `pyusb`.
 
 ## Nie przerywaj flashowania
 
