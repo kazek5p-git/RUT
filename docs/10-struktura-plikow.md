@@ -66,6 +66,7 @@ Nie kasuj bez potrzeby:
 - `program_update_config.json`.
 
 Przy aktualizacji programu najlepiej nadpisywać pliki programu, ale zachować dane robocze i backupy.
+
 ## Narzędzia sterownika DFU
 
 Release zawiera folder `tools\driver`. Są tam skrypty i pliki INF używane przez opcję automatycznej naprawy sterownika WinUSB dla DFU. Ten folder musi być obecny także po rozpakowaniu jedno-plikowego `RUT.exe` do `%LOCALAPPDATA%\RUT\onefile\<wersja>`.

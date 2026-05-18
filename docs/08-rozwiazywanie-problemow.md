@@ -134,6 +134,7 @@ W logu zobaczysz pozycje `OK`, `WARN` i `FAIL`. Najwa?niejsze dla samego startu 
 - rozpakowane foldery `docs`, `assets`, `dist` i `tools`.
 
 Pozycje opcjonalne, takie jak Python, `pyusb`, OpenGD77 CPS i plik kodeka DMR, mog? mie? `WARN`. To nie musi blokowa? startu GUI, ale mo?e blokowa? konkretne funkcje, na przyk?ad `DMR + flash` albo zapis codepluga.
+
 ## Nie znaleziono skryptu naprawy sterownika
 
 Jeżeli pojawia się błąd podobny do:
