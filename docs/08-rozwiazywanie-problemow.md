@@ -134,3 +134,10 @@ W logu zobaczysz pozycje `OK`, `WARN` i `FAIL`. Najwa?niejsze dla samego startu 
 - rozpakowane foldery `docs`, `assets`, `dist` i `tools`.
 
 Pozycje opcjonalne, takie jak Python, `pyusb`, OpenGD77 CPS i plik kodeka DMR, mog? mie? `WARN`. To nie musi blokowa? startu GUI, ale mo?e blokowa? konkretne funkcje, na przyk?ad `DMR + flash` albo zapis codepluga.
+## Nie znaleziono skryptu naprawy sterownika
+
+Jeżeli pojawia się błąd podobny do:
+
+`Nie znaleziono skryptu naprawy sterownika: ...\tools\driver\elevate_install_winusb_dfu.ps1`
+
+to używana paczka RUT jest niepełna albo zbyt stara. Pobierz najnowszy jedno-plikowy `RUT.exe` z GitHuba i uruchom go ponownie. Od wersji `2026.05.18.6` folder `tools\driver` jest częścią paczki release, a diagnostyka sprawdza jego obecność.

@@ -1,5 +1,10 @@
 # Historia zmian dokumentacji
 
+## 2026.05.18.6
+
+- Do paczki release dodano `tools\driver`, czyli skrypt naprawy sterownika DFU WinUSB oraz pliki INF używane przy automatycznej naprawie.
+- Skrypt budowania release przerywa pracę, jeśli w paczce brakuje krytycznych plików, w tym `tools\driver\elevate_install_winusb_dfu.ps1`.
+- Diagnostyka `start_RUT_diagnose.cmd` sprawdza teraz obecność skryptu naprawy DFU i pliku `usb_device.inf`.
 ## 2026.05.18.5
 
 - Dodano własny dostępny kontroler zakładek dla RUT. NVDA nie widzi już 10 elementów w natywnym `TabControl` WinForms.
