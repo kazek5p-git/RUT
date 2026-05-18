@@ -152,7 +152,7 @@ Od wersji `2026.05.18.7` okno naprawy:
 - pokazuje kolejne kroki w konsoli,
 - zapisuje log do `logs\driver_install_YYYYMMDD_HHMMSS.txt`,
 - sprawdza DFU `USB\VID_0483&PID_DF11` oraz `USB\VID_1FC9&PID_0094`,
-- próbuje `pnputil` i pakietowego instalatora libwdi,
+- próbuje `pnputil`, wymuszenia przez Windowsowe `newdev.dll` i pakietowego instalatora libwdi,
 - jeśli automatyka nie wystarczy, otwiera `zadig-2.9.exe`.
 
-W Zadig wybierz `Options > List All Devices`, potem urządzenie DFU/STM32/OpenGD77/Retevis, ustaw sterownik `WinUSB` i kliknij `Install Driver` albo `Replace Driver`. Po zamknięciu Zadiga skrypt sprawdzi sterownik jeszcze raz.
+W wersji `2026.05.18.8` RUT przed Zadigiem próbuje jeszcze wymusić sterownik przez systemowe `UpdateDriverForPlugAndPlayDevices`, więc w wielu przypadkach użytkownik nie musi nic klikać ręcznie.`n`nW Zadig wybierz `Options > List All Devices`, potem urządzenie DFU/STM32/OpenGD77/Retevis, ustaw sterownik `WinUSB` i kliknij `Install Driver` albo `Replace Driver`. Po zamknięciu Zadiga skrypt sprawdzi sterownik jeszcze raz.

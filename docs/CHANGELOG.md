@@ -1,5 +1,10 @@
 # Historia zmian dokumentacji
 
+## 2026.05.18.8
+
+- Dodano automatyczne wymuszanie przypięcia WinUSB przez Windowsowe `newdev.dll` (`UpdateDriverForPlugAndPlayDevices`) przed awaryjnym uruchomieniem Zadiga.
+- Naprawa sterownika próbuje teraz kolejno: `wdi-simple` jeśli istnieje, `pnputil`, wymuszenie przez `newdev.dll`, pakietowy instalator libwdi, usunięcie starego STTub30, a dopiero na końcu Zadig.
+- Self-test skryptu sterownika sprawdza dostępność API `newdev.dll`.
 ## 2026.05.18.7
 
 - Przepisano skrypt naprawy sterownika DFU WinUSB: okno PowerShell pokazuje teraz postęp, zapisuje log i nie zamyka się od razu przy błędzie.
