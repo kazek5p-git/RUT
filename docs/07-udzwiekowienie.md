@@ -23,6 +23,18 @@ RUT może użyć:
 
 Dla pakietów UV380-like RUT preferuje pliki zgodne z rodziną UV380/UV390/RT3S.
 
+## Wybór portu COM
+
+Na zakładce `Firmware i głos` jest pole `Port COM OpenGD77`.
+
+- `Automatycznie` - zalecane ustawienie domyślne. RUT sprawdza kolejno wykryte porty COM i wybiera ten, który odpowie jak radio OpenGD77.
+- `COMx` - wybierz port z listy albo wpisz go ręcznie, na przykład `COM5`, tylko gdy wiesz, który port należy do radia albo automatyka nie znajduje radia.
+- `Odśwież porty COM` - odświeża listę po podłączeniu albo przepięciu radia.
+
+Ten wybór dotyczy trybu normalnego OpenGD77: udźwiękowienia, zapisu kanałów i backupu codepluga. Nie dotyczy DFU, bo firmware wgrywa się innym mechanizmem USB.
+
+Jeżeli auto wykryje kilka portów, błędne porty typu Bluetooth albo Intel AMT są traktowane jako mniej prawdopodobne. Jeśli pierwszy port nie odpowie, RUT próbuje następne porty zamiast kończyć operację od razu.
+
 ## Weryfikacja pliku
 
 Przed wgraniem RUT sprawdza, czy plik wygląda jak poprawny pakiet głosowy. Jeśli plik jest uszkodzony albo niezgodny, operacja zostanie przerwana.
@@ -41,7 +53,7 @@ Jeśli radio nie jest widoczne w trybie normalnym, sprawdź port COM i sterownik
 
 ## Typowe błędy
 
-- `Nie znaleziono portu COM` - radio nie jest w trybie normalnym albo sterownik COM nie działa.
+- `Nie znaleziono portu COM` - radio nie jest w trybie normalnym albo sterownik COM nie działa. Sprawdź pole `Port COM OpenGD77`, odśwież listę portów albo wpisz port ręcznie, na przykład `COM5`.
 - `Port COM jest zajęty` - zamknij OpenGD77 CPS i inne programy radiowe.
 - `Brak odpowiedzi radia` - odłącz USB, podłącz ponownie, uruchom radio normalnie i spróbuj jeszcze raz.
 - `Plik pakietu mowy jest nieprawidłowy` - wybierz inny `.vpr`.
