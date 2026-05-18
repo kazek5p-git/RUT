@@ -1,5 +1,9 @@
 # Historia zmian dokumentacji
 
+## 2026.05.18.4
+
+- Poprawiono dostępność zakładek: RUT nie nadaje już stronom zakładek dodatkowej roli `PageTab`, bo NVDA liczył wtedy 5 natywnych zakładek plus 5 stron, czyli `1 z 10`.
+- Numerowanie zakładek zostaje po stronie natywnego kontrolera Windows, dzięki czemu powinno być `1 z 5`.
 ## 2026.05.18.3
 
 - RUT pobiera manifest aktualizacji z parametrem anty-cache, żeby Windows PowerShell nie używał starego `latest.json`.

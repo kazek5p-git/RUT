@@ -12,7 +12,7 @@ Główne okno jest podzielone na pięć zakładek:
 - `Status i log` - bieżący status, ostatni komunikat i pełny log pracy.
 - `Program` - aktualizacja RUT, zamknięcie programu i skróty.
 
-Po uruchomieniu fokus trafia na pasek zakładek. Czytnik ekranu dostaje też nazwę z numerem, na przykład `Radio. Zakładka 1 z 5`.
+Po uruchomieniu fokus trafia na pasek zakładek. Numer zakładki czyta natywny mechanizm Windows/NVDA, na przykład `1 z 5`. RUT nie nadaje stronom zakładek dodatkowej roli, żeby czytnik nie liczył ich podwójnie.
 
 ## Główne kontrolki
 
