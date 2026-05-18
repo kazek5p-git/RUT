@@ -6,7 +6,7 @@ Ten rozdział warto przeczytać przed pierwszym flashowaniem radia, szczególnie
 
 Przycisk `Backup radia` odczytuje codeplug OpenGD77 `.g77` z radia w trybie normalnym przez port COM. Backup trafia do folderu:
 
-`C:\Users\Kazek\RUT\backups\radio`
+`<folder RUT>\backups\radio`
 
 W środku powstaje podfolder z nazwą profilu i datą. RUT zapisuje tam:
 
@@ -52,7 +52,7 @@ Zasada praktyczna:
 
 Domyślny folder:
 
-`C:\Users\Kazek\RUT\backups\radio`
+`<folder RUT>\backups\radio`
 
 Nie kasuj tego folderu przy aktualizacji programu. Aktualizacja RUT z ZIP-a powinna być robiona tak, żeby nie usuwać folderów `backups`, `downloads`, `logs` i `secrets`.
 

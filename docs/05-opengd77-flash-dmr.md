@@ -54,9 +54,11 @@ Funkcja `DMR + flash` robi trzy rzeczy:
 2. Bierze plik z kodekiem DMR.
 3. Scala je i wgrywa wynik przez DFU.
 
-Domyślna ścieżka pliku kodeka DMR w tej instalacji to:
+Plik kodeka DMR jest częścią paczki RUT i powinien znajdować się tutaj:
 
-`C:\Users\Kazek\AppData\Roaming\TweeseCake\Telegram-1\files\documents\MD9600-CSV(2571V5)-V26.45.bin`
+`tools\opengd77_dmr\resources\MD9600-CSV(2571V5)-V26.45.bin`
+
+Nie używaj ścieżek z komputera osoby, która budowała paczkę. Awaryjnie można wskazać własny plik przez zmienną środowiskową `RUT_DMR_CODEC_PATH`, ale standardowy release nie powinien tego wymagać.
 
 Helper sprawdza SHA256 pliku kodeka. Jeżeli plik jest inny, operacja zostanie przerwana.
 

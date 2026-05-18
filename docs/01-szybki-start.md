@@ -14,7 +14,7 @@ Ten rozdział opisuje najkrótszą bezpieczną drogę od pobrania RUT do pierwsz
 
 1. Pobierz `RUT.zip` z najnowszego release:
    https://github.com/kazek5p-git/RUT/releases/latest/download/RUT.zip
-2. Rozpakuj ZIP do własnego folderu, na przykład `C:\Users\Kazek\RUT`.
+2. Rozpakuj ZIP do własnego folderu, na przykład `<folder RUT>`.
 3. Uruchom `start_RUT.vbs`.
 4. Je?li program zamyka si? od razu, uruchom `start_RUT_debug.cmd` i sprawd? pliki `.txt` w folderze `logs`.
 4. Jeśli Windows albo program antywirusowy zapyta o zaufanie do pliku, potwierdź tylko wtedy, gdy ZIP pochodzi z powyższego release GitHub.

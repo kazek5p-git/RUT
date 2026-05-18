@@ -1,5 +1,11 @@
 # Historia zmian dokumentacji
 
+## 2026.05.18.1
+
+- Usunięto zaszytą ścieżkę do kodeka DMR z profilu `C:\Users\Kazek`.
+- Kodek DMR jest teraz pakowany w `tools\opengd77_dmr\resources` i RUT szuka go w katalogu programu.
+- Diagnostyka komponentów sprawdza kodek DMR w paczce RUT, a nie w prywatnym katalogu Telegrama.
+- Usunięto twarde `D:\` z wyboru referencyjnego pliku promptów głosowych.
 ## 2026.05.17.8
 
 - Naprawiono auto-check aktualizacji programu dla manifestu pobieranego z GitHuba jako bajty application/octet-stream.
