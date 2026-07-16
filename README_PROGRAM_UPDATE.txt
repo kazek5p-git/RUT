@@ -19,6 +19,9 @@ Aktualizator programu RUT
 - Polecenie:
   powershell -ExecutionPolicy Bypass -File .\build_program_update_release.ps1 -Version 2026.07.16.1 -BaseUrl https://github.com/kazek5p-git/RUT/releases/latest/download -PackageBaseUrl https://github.com/kazek5p-git/RUT/releases/download/v2026.07.16.1 -BuildOneFileExe
 
+- Przed publikacją uruchom zbiorczy test release:
+  powershell -ExecutionPolicy Bypass -File .\tools\release\Test-RUT-Release.ps1 -Version 2026.07.16.1 -Build -BuildOneFileExe
+
 - Wyniki:
   - EXE: dist\program_updater_release\<version>\RUT.exe
   - ZIP: dist\program_updater_release\<version>\RUT.zip
@@ -28,10 +31,15 @@ Aktualizator programu RUT
 - Release powinien mieć tag w formacie:
   v2026.07.16.1
 
+- Jeśli zmieniasz EXE, ZIP albo latest.json, utwórz nową wersję i nowy tag. Nie podmieniaj plików w istniejącym tagu.
+
 - Do release dołącz:
   - RUT.exe
   - RUT.zip
   - latest.json
+
+- Bezpieczny skrypt publikacji:
+  powershell -ExecutionPolicy Bypass -File .\tools\release\Publish-RUT-GitHubRelease.ps1 -Version 2026.07.16.1
 
 - Stałe linki po publikacji:
   - https://github.com/kazek5p-git/RUT/releases/latest/download/RUT.exe

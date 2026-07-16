@@ -18,6 +18,7 @@ Najważniejsze rozdziały:
 - `docs\07-udzwiekowienie.md` - pakiety głosowe VPR.
 - `docs\08-rozwiazywanie-problemow.md` - typowe błędy i naprawy.
 - `docs\09-aktualizacje-i-release.md` - aktualizacja programu i release GitHub.
+- `docs\11-scenariusze.md` - gotowe przepisy: RT3S, prompt, CPS, diagnostyka i release.
 
 ## Uruchomienie
 

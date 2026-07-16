@@ -13,6 +13,7 @@ Ten folder jest dokumentacją offline. Można go czytać w Notatniku, Visual Stu
 5. Jeśli chcesz dodać przemienniki DMR i własne DMR ID, przejdź do [06-kanaly-dmr.md](06-kanaly-dmr.md).
 6. Jeśli chcesz wgrać pakiet głosowy, przejdź do [07-udzwiekowienie.md](07-udzwiekowienie.md).
 7. Jeśli coś nie działa, sprawdź [08-rozwiazywanie-problemow.md](08-rozwiazywanie-problemow.md).
+8. Jeśli chcesz wykonać konkretny typowy przebieg krok po kroku, przejdź do [11-scenariusze.md](11-scenariusze.md).
 
 ## Spis dokumentów
 
@@ -26,6 +27,7 @@ Ten folder jest dokumentacją offline. Można go czytać w Notatniku, Visual Stu
 - [08-rozwiazywanie-problemow.md](08-rozwiazywanie-problemow.md) - DFU, COM, sterowniki, OpenGD77 CPS i typowe błędy.
 - [09-aktualizacje-i-release.md](09-aktualizacje-i-release.md) - autoaktualizacja RUT, GitHub release i manifest.
 - [10-struktura-plikow.md](10-struktura-plikow.md) - gdzie RUT zapisuje pliki, logi, backupy i paczki.
+- [11-scenariusze.md](11-scenariusze.md) - gotowe przebiegi dla RT3S, DMR + flash, promptów, CPS i diagnostyki.
 
 ## Najważniejsze zasady
 

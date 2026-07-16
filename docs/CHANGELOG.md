@@ -8,6 +8,8 @@
 - Dodano ręczny przycisk `Napraw sterownik DFU`.
 - Dodano walidację paczek CSV OpenGD77 CPS, także w trybie konsolowym `-ValidateCpsDir`.
 - Paczki CSV tworzone przez RUT zawierają podstawowe pliki pomocnicze kontaktów i list TG.
+- Dodano modularny zestaw narzędzi release w `tools\release`: wspólny moduł kontroli, zbiorczy test release i bezpieczną publikację GitHub bez podmieniania istniejących tagów.
+- Dodano rozdział `11-scenariusze.md` z gotowymi przebiegami dla użytkownika i osoby pomagającej zdalnie.
 
 ## 2026.05.19.3
 
