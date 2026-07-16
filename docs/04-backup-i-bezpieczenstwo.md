@@ -38,6 +38,16 @@ Kliknij `Backup radia`, gdy:
 
 Nie klikaj tego przycisku, gdy radio jest w DFU. W DFU nie ma normalnego portu COM do odczytu codepluga.
 
+## Automatyczny backup przed ryzykowną operacją
+
+Przed zapisem kanałów do radia i przed wgrywaniem pakietu głosowego RUT próbuje automatycznie odczytać aktualny codeplug OpenGD77. Backup trafia do:
+
+`<folder RUT>\backups\radio`
+
+Jeśli ten odczyt się nie uda, RUT pokazuje ostrzeżenie i pyta, czy kontynuować. Najbezpieczniej wtedy przerwać, sprawdzić port COM, zamknąć CPS i najpierw zrobić `Backup radia` ręcznie.
+
+Ten automatyczny backup nie zastępuje fabrycznej kopii RT3S wykonanej oficjalnym CPS producenta przed pierwszym przejściem na OpenGD77.
+
 ## Backup przed flashowaniem RT3S
 
 Dla profili `Retevis RT3S bez GPS` i `Retevis RT3S GPS` RUT pokazuje ostrzeżenie przed flashowaniem. To ostrzeżenie nie blokuje pracy na siłę, ale przypomina o backupie kalibracji.

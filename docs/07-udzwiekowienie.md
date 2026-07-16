@@ -33,11 +33,15 @@ Na zakładce `Firmware i głos` jest pole `Port COM OpenGD77`.
 
 Ten wybór dotyczy trybu normalnego OpenGD77: udźwiękowienia, zapisu kanałów i backupu codepluga. Nie dotyczy DFU, bo firmware wgrywa się innym mechanizmem USB.
 
+Od wersji `2026.05.19.3` RUT przy wgrywaniu promptów używa ścieżki OpenGD77 Direct: najpierw odczytuje `RadioInfo`, a dla RT3S/UV380/UV390 zapisuje prompt pod adresem `0xAF400` tak jak OpenGD77 CPS.
+
 Jeżeli auto wykryje kilka portów, błędne porty typu Bluetooth albo Intel AMT są traktowane jako mniej prawdopodobne. Jeśli pierwszy port nie odpowie, RUT próbuje następne porty zamiast kończyć operację od razu.
 
 ## Weryfikacja pliku
 
 Przed wgraniem RUT sprawdza, czy plik wygląda jak poprawny pakiet głosowy. Jeśli plik jest uszkodzony albo niezgodny, operacja zostanie przerwana.
+
+Przed właściwym zapisem RUT próbuje też zrobić automatyczny backup aktualnego codepluga OpenGD77. Jeśli backup się nie uda, program pokaże ostrzeżenie i pozwoli przerwać operację przed zapisem promptu.
 
 ## Co zrobić, gdy radio przestanie mówić
 

@@ -36,6 +36,26 @@ Przycisk `Kanały + wgraj` wykonuje pełny przepływ:
 
 Radio musi być w trybie normalnym, nie w DFU.
 
+## Sprawdź paczkę CSV
+
+Przycisk `Sprawdź paczkę CSV` waliduje folder eksportu/importu OpenGD77 CPS przed próbą wgrania go w CPS. RUT sprawdza między innymi:
+
+- czy istnieją `Channels.csv` i `Zones.csv`,
+- czy pliki mają spójny separator `;` albo `,`,
+- czy każdy wiersz ma tyle pól co nagłówek,
+- czy kanały mają nazwy,
+- czy strefy nie wskazują pustych kanałów.
+
+To pomaga przy błędach OpenGD77 CPS typu `line 2 is not valid in channels`.
+
+Ten sam test można uruchomić z konsoli:
+
+```powershell
+powershell.exe -ExecutionPolicy Bypass -File .\RUT.ps1 -ValidateCpsDir "C:\folder_csv"
+```
+
+Paczki CSV tworzone przez RUT zawierają teraz także pomocnicze pliki `Contacts.csv`, `TG_Lists.csv`, `Channels.csv` i `Zones.csv`, żeby OpenGD77 CPS dostał komplet podstawowych danych.
+
 ## Czy RUT usuwa moje kanały
 
 Założenie RUT jest takie, żeby dopisywać kanały, a nie podmieniać cały codeplug. Program usuwa stare wpisy tylko wtedy, gdy wykryje rzeczywiste powtórzenie potrzebne do oszczędzenia miejsca i uniknięcia duplikatu.

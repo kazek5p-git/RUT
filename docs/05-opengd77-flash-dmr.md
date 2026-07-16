@@ -20,6 +20,8 @@ Do DFU potrzebny jest poprawny sterownik, zwykle WinUSB. RUT ma opcję:
 
 `Po braku DFU spróbuj automatycznej instalacji sterownika WinUSB`
 
+RUT ma też przycisk `Napraw sterownik DFU` na zakładce `Firmware i głos`. Użyj go, gdy radio jest już w DFU i chcesz uruchomić naprawę sterownika bez rozpoczynania flashowania.
+
 RUT próbuje naprawić sterownik automatycznie przez `pnputil`, `newdev.dll` i pakietowy instalator libwdi. Jeśli automatyka nie wystarczy, otworzy pakietowy `zadig-2.9.exe` jako fallback. W Zadig wybierz urządzenie DFU/STM32/OpenGD77/Retevis i ustaw `WinUSB`. Szczegóły są w [08-rozwiazywanie-problemow.md](08-rozwiazywanie-problemow.md).
 
 ## UV390 Plus 10W

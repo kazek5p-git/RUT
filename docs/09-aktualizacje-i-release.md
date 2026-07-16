@@ -20,6 +20,12 @@ Manifest zawiera:
 
 RUT porównuje wersję lokalną z wersją zdalną i pobiera ZIP, jeśli jest nowszy. Przy pobieraniu manifestu dodaje parametr anty-cache, żeby Windows PowerShell nie użył starego `latest.json`.
 
+Przed zastosowaniem aktualizacji RUT tworzy lokalną kopię rollback w:
+
+`backups\program_update_rollbacks`
+
+Jeśli po aktualizacji coś jest nie tak, użyj przycisku `Cofnij aktualizację` w zakładce `Program`. Program przywróci najnowszą kopię i uruchomi się ponownie.
+
 ## Auto-check przy starcie
 
 W pliku `program_update_config.json` jest opcja:
@@ -40,7 +46,7 @@ Jeśli jest ustawiona na `true`, RUT sprawdza aktualizację po starcie.
 Skrypt budujący:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\build_program_update_release.ps1 -Version 2026.05.18.3 -BaseUrl https://github.com/kazek5p-git/RUT/releases/latest/download -PackageBaseUrl https://github.com/kazek5p-git/RUT/releases/download/v2026.05.18.3 -BuildOneFileExe
+powershell -ExecutionPolicy Bypass -File .\build_program_update_release.ps1 -Version 2026.07.16.1 -BaseUrl https://github.com/kazek5p-git/RUT/releases/latest/download -PackageBaseUrl https://github.com/kazek5p-git/RUT/releases/download/v2026.07.16.1 -BuildOneFileExe
 ```
 
 Wyniki trafiają do:
@@ -66,6 +72,8 @@ ZIP powinien zawierać między innymi:
 - `docs`,
 - `assets`,
 - `tools\opengd77_dmr`,
+- `tools\diagnostics`,
+- `tools\driver`,
 - `dist\firmware_extracted`,
 - `dist\OpenGD77_UV390_BackendCLI.exe`,
 - `secrets\README.txt`.
@@ -76,7 +84,7 @@ ZIP nie powinien zawierać prawdziwych tokenów ani prywatnych sekretów.
 
 Release publikuje się jako tag, na przykład:
 
-`v2026.05.17.4`
+`v2026.07.16.1`
 
 Do release trzeba dołączyć:
 

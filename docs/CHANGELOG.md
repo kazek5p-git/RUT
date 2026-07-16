@@ -1,5 +1,19 @@
 # Historia zmian dokumentacji
 
+## 2026.07.16.1
+
+- Dodano automatyczny backup codepluga przed zapisem kanałów i wgrywaniem promptów.
+- Dodano przycisk `Paczka diagnostyczna`, który tworzy ZIP z logami, konfiguracją bez sekretów, portami COM i listą ważnych plików.
+- Dodano przycisk `Cofnij aktualizację`, oparty o kopię programu tworzoną przed aktualizacją RUT.
+- Dodano ręczny przycisk `Napraw sterownik DFU`.
+- Dodano walidację paczek CSV OpenGD77 CPS, także w trybie konsolowym `-ValidateCpsDir`.
+- Paczki CSV tworzone przez RUT zawierają podstawowe pliki pomocnicze kontaktów i list TG.
+
+## 2026.05.19.3
+
+- Wgrywanie promptów `.vpr` używa teraz ścieżki OpenGD77 Direct, tej samej klasy komunikacji COM co odczyt codepluga.
+- Dla radii STM32, takich jak RT3S/UV380/UV390, RUT wybiera adres promptów `0xAF400` i komendę zapisu `X`, zgodnie z OpenGD77 CPS.
+- Szybki test portu COM odczytuje `RadioInfo`, dzięki czemu log pokazuje typ radia, build, bufor USB i plan zapisu.
 ## 2026.05.18.9
 
 - Dodano wbudowany `OpenGD77_STM32_FW_Loader.exe` dla funkcji `DMR + flash`, zbudowany z loadera OpenGD77 i spakowany z `pyusb`.
@@ -57,25 +71,25 @@
 ## 2026.05.17.8
 
 - Naprawiono auto-check aktualizacji programu dla manifestu pobieranego z GitHuba jako bajty application/octet-stream.
-- RUT dekoduje teraz tresc latest.json jako UTF-8 przed ConvertFrom-Json.
+- RUT dekoduje teraz treść `latest.json` jako UTF-8 przed `ConvertFrom-Json`.
 
 ## 2026.05.17.7
 
-- Naprawiono b??d startu: funkcje pomocnicze profili OpenGD77 by?y omy?kowo zagnie?d?one w `Refresh-RadioProfilesCombo` przed blokiem `param`.
-- Objaw b??du: program zamyka? si? natychmiast, a log zawiera? `The term 'param' is not recognized` przy `Refresh-RadioProfilesCombo`.
+- Naprawiono błąd startu: funkcje pomocnicze profili OpenGD77 były omyłkowo zagnieżdżone w `Refresh-RadioProfilesCombo` przed blokiem `param`.
+- Objaw błędu: program zamykał się natychmiast, a log zawierał `The term 'param' is not recognized` przy `Refresh-RadioProfilesCombo`.
 
 ## 2026.05.17.6
 
-- Dodano `start_RUT_diagnose.cmd` do sprawdzania brakuj?cych sk?adnik?w.
+- Dodano `start_RUT_diagnose.cmd` do sprawdzania brakujących składników.
 - Dodano `tools\diagnostics\Test-RUT-Components.ps1`.
-- Diagnostyka zapisuje wynik do `logs\RUT_components_*.txt` i rozr??nia `OK`, `WARN` oraz `FAIL`.
+- Diagnostyka zapisuje wynik do `logs\RUT_components_*.txt` i rozróżnia `OK`, `WARN` oraz `FAIL`.
 
 ## 2026.05.17.5
 
-- Dodano diagnostyczne logi startu jako zwyk?e pliki `.txt`.
+- Dodano diagnostyczne logi startu jako zwykłe pliki `.txt`.
 - Launcher `start_RUT.vbs` tworzy `logs\RUT_last_start.txt`, `logs\RUT_launcher_*.txt` i `logs\RUT_powershell_*.txt`.
-- Dodano `start_RUT_debug.cmd`, kt?ry zostawia okno konsoli i zapisuje log tekstowy, gdy program zamyka si? od razu.
-- G??wny log RUT ma teraz rozszerzenie `.txt`, a `logs\RUT_last_log.txt` wskazuje ostatni g??wny log.
+- Dodano `start_RUT_debug.cmd`, który zostawia okno konsoli i zapisuje log tekstowy, gdy program zamyka się od razu.
+- Główny log RUT ma teraz rozszerzenie `.txt`, a `logs\RUT_last_log.txt` wskazuje ostatni główny log.
 
 ## 2026.05.17.4
 

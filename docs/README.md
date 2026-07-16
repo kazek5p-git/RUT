@@ -34,6 +34,9 @@ Ten folder jest dokumentacją offline. Można go czytać w Notatniku, Visual Stu
 - Przed pierwszym flashowaniem RT3S z fabrycznego firmware trzeba zachować fabryczną kalibrację i oryginalny codeplug oficjalnym CPS producenta.
 - RUT nie powinien podmieniać Twoich kanałów bez potrzeby. Import DMR jest robiony jako dopisanie, a duplikaty są usuwane tylko tam, gdzie są faktycznie powtórzone.
 - DMR ID wpisane w polu programu jest używane przy budowaniu kanałów OpenGD77.
+- Przed zapisem kanałów i promptów RUT próbuje zrobić automatyczny backup codepluga OpenGD77. Jeśli backup nie wyjdzie, program pyta, czy kontynuować.
+- W zakładce `Program` jest paczka diagnostyczna i cofanie programu do kopii sprzed aktualizacji.
+- W zakładce `Kanały` jest walidacja paczek CSV dla OpenGD77 CPS, żeby szybciej wykryć błędy typu `line 2 is not valid`.
 
 ## Linki
 

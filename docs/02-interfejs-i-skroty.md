@@ -10,7 +10,7 @@ Główne okno jest podzielone na pięć zakładek:
 - `Kanały` - import kanałów z pliku, import przemienników z internetu i zapis kanałów do radia.
 - `Firmware i głos` - wybór portu COM OpenGD77, wgrywanie pakietu głosowego oraz funkcja `DMR + flash`.
 - `Status i log` - bieżący status, ostatni komunikat i pełny log pracy.
-- `Program` - aktualizacja RUT, zamknięcie programu i skróty.
+- `Program` - aktualizacja RUT, paczka diagnostyczna, cofanie aktualizacji, zamknięcie programu i skróty.
 
 Po uruchomieniu fokus trafia na pasek zakładek. RUT używa własnego dostępnego kontrolera zakładek, żeby NVDA widział tylko 5 zakładek i czytał nazwę z numerem, na przykład `Kanały. Zakładka 2 z 5`.
 
@@ -24,6 +24,7 @@ Po uruchomieniu fokus trafia na pasek zakładek. RUT używa własnego dostępneg
 - `Język interfejsu` - tryb automatyczny albo ręczny wybór języka.
 - `Port COM OpenGD77` - port radia w trybie normalnym. Domyślnie zostaw `Automatycznie`: RUT sprawdzi wykryte porty i wybierze taki, który odpowie jak OpenGD77. Ręczny wybór lub wpisanie `COM5` wymusza konkretny port dla udźwiękowienia, kanałów i backupu OpenGD77.
 - `Log` - najważniejsze miejsce diagnostyczne. Jeśli coś nie działa, najpierw przeczytaj ostatnie linie logu.
+- `Sprawdź paczkę CSV` - sprawdza folder CSV przed importem do OpenGD77 CPS i wykrywa typowe błędy separatorów, brakujących kolumn i pustych wartości.
 
 ## Przyciski
 
@@ -36,7 +37,10 @@ Po uruchomieniu fokus trafia na pasek zakładek. RUT używa własnego dostępneg
 - `Odśwież porty COM` - ponownie skanuje porty COM widoczne w Windows.
 - `Udźwiękowienie` - wybiera i wgrywa pakiet głosowy `.vpr`.
 - `DMR + flash` - scala kodek DMR z firmware OpenGD77 i wgrywa wynik przez DFU.
+- `Napraw sterownik DFU` - ręcznie uruchamia kreator naprawy WinUSB dla radia w DFU, bez czekania na błąd flashowania.
 - `Backup radia` - robi backup codepluga OpenGD77 `.g77` w trybie normalnym przez COM.
+- `Cofnij aktualizację` - przywraca ostatnią kopię programu utworzoną przed aktualizacją RUT.
+- `Paczka diagnostyczna` - tworzy ZIP z logami, konfiguracją bez sekretów, listą portów COM i listą ważnych plików programu.
 - `Zamknij` - zamyka program. W czasie operacji zamknięcie jest blokowane.
 
 ## Skróty klawiaturowe
@@ -49,7 +53,11 @@ Po uruchomieniu fokus trafia na pasek zakładek. RUT używa własnego dostępneg
 - `Alt+W` - Kanały + wgraj.
 - `Alt+V` - Udźwiękowienie.
 - `Alt+M` - DMR + flash.
+- `Alt+J` - Napraw sterownik DFU.
 - `Alt+B` - Backup radia.
+- `Alt+Y` - Sprawdź paczkę CSV.
+- `Alt+O` - Cofnij aktualizację programu.
+- `Alt+G` - Paczka diagnostyczna.
 - `Alt+R` - przejdź na zakładkę `Radio` i ustaw fokus na model radia.
 - `Alt+P` - przejdź na zakładkę `Firmware i głos` i ustaw fokus na wybór portu COM OpenGD77.
 - `Alt+L` - przejdź na zakładkę `Status i log` i ustaw fokus na log.

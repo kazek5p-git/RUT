@@ -13,7 +13,7 @@ Ten rozdział opisuje najważniejsze foldery i pliki w instalacji RUT.
 
 - `start_RUT.vbs` - najprostszy launcher bez widocznej konsoli.
 - `start_RUT_debug.cmd` - launcher diagnostyczny, zostawia okno i zapisuje pliki `.txt` w `logs`.
-- `start_RUT_diagnose.cmd` - sprawdza brakuj?ce sk?adniki i zapisuje `logs\RUT_components_*.txt`.
+- `start_RUT_diagnose.cmd` - sprawdza brakujące składniki i zapisuje `logs\RUT_components_*.txt`.
 - `RUT.ps1` - główny program GUI.
 - `radio_updater_and_tools.ps1` - alias zgodności uruchamiający RUT.
 - `OpenGD77_UV390_A11y.ps1` - alias zgodności uruchamiający RUT.
@@ -27,7 +27,7 @@ Ten rozdział opisuje najważniejsze foldery i pliki w instalacji RUT.
 ## Dokumentacja
 
 - `README_GUI_RUN.txt` - krótka instrukcja uruchomienia.
-- `README_PROGRAM_UPDATE.txt` - starsza notatka o aktualizacji programu.
+- `README_PROGRAM_UPDATE.txt` - krótka notatka o aktualizacji programu i release.
 - `docs\README.md` - główny indeks dokumentacji.
 - `docs\*.md` - rozdziały dokumentacji offline.
 
@@ -37,7 +37,8 @@ Ten rozdział opisuje najważniejsze foldery i pliki w instalacji RUT.
 - `dist\firmware_extracted\OpenMDUV380_10W_PLUS.bin` - firmware dla UV390 Plus 10W.
 - `dist\firmware_extracted\OpenMDUV380.bin` - firmware dla RT3S/MDUV380.
 - `tools\opengd77_dmr\Run_OpenGD77_DMR_Flash.ps1` - helper DMR + flash.
-- `tools\opengd77_dmr\OpenGD77_STM32_FW_Loader.exe` - wbudowany loader OpenGD77 STM32 dla DMR + flash, bez wymagania Pythona.`n- `tools\opengd77_dmr\opengd77_stm32_firmware_loader.py` - źródłowy loader OpenGD77 STM32 używany jako fallback/dewelopersko.
+- `tools\opengd77_dmr\OpenGD77_STM32_FW_Loader.exe` - wbudowany loader OpenGD77 STM32 dla DMR + flash, bez wymagania Pythona.
+- `tools\opengd77_dmr\opengd77_stm32_firmware_loader.py` - źródłowy loader OpenGD77 STM32 używany jako fallback/dewelopersko.
 - `tools\opengd77_dmr\libusb-1.0.dll` - biblioteka USB dla helpera.
 
 ## Dane robocze
@@ -45,8 +46,9 @@ Ten rozdział opisuje najważniejsze foldery i pliki w instalacji RUT.
 - `downloads\channel_lists` - pobrane i wygenerowane listy kanałów.
 - `downloads\voice_prompts` - pobrane pakiety głosowe.
 - `backups\radio` - backupy codepluga OpenGD77 i instrukcje backupu RT3S.
+- `backups\program_update_rollbacks` - kopie programu tworzone automatycznie przed aktualizacją RUT.
 - `logs` - logi pracy RUT.
-- `diagnostics` - pliki diagnostyczne, jeśli dana funkcja je tworzy.
+- `diagnostics\packages` - paczki ZIP z diagnostyką tworzone przyciskiem `Paczka diagnostyczna`.
 
 ## Release
 

@@ -75,6 +75,12 @@ RUT zapisuje logi w:
 
 `logs\RUT_YYYYMMDD_HHMMSS.txt`
 
+W zakładce `Program` można kliknąć `Paczka diagnostyczna`. RUT utworzy ZIP w:
+
+`diagnostics\packages`
+
+Paczka zawiera logi, konfigurację bez sekretów, listę portów COM, informacje o sterowniku DFU i spis ważnych plików programu. To jest najwygodniejszy plik do wysłania komuś, kto ma pomóc w diagnozie.
+
 W razie problemu najważniejsze są:
 
 - ostatnie linie logu w oknie programu,
@@ -85,46 +91,55 @@ W razie problemu najważniejsze są:
 
 Najlepiej wysłać:
 
+- paczkę ZIP z przycisku `Paczka diagnostyczna`,
 - model radia,
 - czy radio było w DFU czy w trybie normalnym,
 - ostatnie 20-40 linii logu,
 - nazwę operacji, którą uruchomiono,
 - informację, czy Windows widzi DFU albo COM,
 - wersję RUT z manifestu lub release.
-## Program zamyka si? od razu po uruchomieniu
+
+## OpenGD77 CPS: line 2 is not valid in channels
+
+Ten błąd zwykle oznacza, że CPS dostał plik CSV z niezgodnym separatorem, brakującą kolumną, uszkodzonym nagłówkiem albo niepoprawną wartością już w pierwszym wierszu danych.
+
+W RUT użyj przycisku `Sprawdź paczkę CSV` w zakładce `Kanały` i wskaż folder z plikami importu. Jeśli walidator pokaże błąd, popraw wskazany plik albo wygeneruj paczkę ponownie najnowszym RUT-em.
+
+Jeśli paczka była tworzona ręcznie, używaj kodowania UTF-8 bez BOM albo zwykłego ANSI z polskimi znakami zgodnego z systemem, ale nie mieszaj separatorów `;` i `,` w jednej paczce.
+## Program zamyka się od razu po uruchomieniu
 
 Najpierw uruchom:
 
 `start_RUT_debug.cmd`
 
-Ten plik zostawia widoczne okno i zapisuje diagnostyk? do zwyk?ych plik?w tekstowych `.txt` w folderze `logs`. Po takim uruchomieniu wy?lij albo sprawd?:
+Ten plik zostawia widoczne okno i zapisuje diagnostykę do zwykłych plików tekstowych `.txt` w folderze `logs`. Po takim uruchomieniu wyślij albo sprawdź:
 
-- `logs\RUT_last_start.txt` - kr?tka informacja, kt?re pliki s? z ostatniego startu.
+- `logs\RUT_last_start.txt` - krótka informacja, które pliki są z ostatniego startu.
 - `logs\RUT_launcher_YYYYMMDD_HHMMSS.txt` - log launchera VBS.
-- `logs\RUT_powershell_YYYYMMDD_HHMMSS.txt` - b??dy z PowerShella, je?li RUT.ps1 nie wystartowa?.
-- `logs\RUT_last_log.txt` - wskazuje g??wny log RUT, je?li skrypt zd??y? wystartowa?.
-- `logs\RUT_YYYYMMDD_HHMMSS.txt` - g??wny log programu.
+- `logs\RUT_powershell_YYYYMMDD_HHMMSS.txt` - błędy z PowerShella, jeśli `RUT.ps1` nie wystartował.
+- `logs\RUT_last_log.txt` - wskazuje główny log RUT, jeśli skrypt zdążył wystartować.
+- `logs\RUT_YYYYMMDD_HHMMSS.txt` - główny log programu.
 
-Najcz?stsze przyczyny natychmiastowego zamkni?cia:
+Najczęstsze przyczyny natychmiastowego zamknięcia:
 
-- ZIP nie zosta? rozpakowany, tylko program uruchomiono ze ?rodka archiwum.
-- Windows zablokowa? pliki pobrane z internetu.
+- ZIP nie został rozpakowany, tylko program uruchomiono ze środka archiwum.
+- Windows zablokował pliki pobrane z internetu.
 - Antywirus albo polityka firmowa blokuje `.vbs` lub PowerShell.
 - Brakuje PowerShella albo jest uszkodzony.
-- Brakuje pliku `RUT.ps1`, bo paczka zosta?a rozpakowana niepe?nie.
-- Skrypt zatrzyma? si? na b??dzie sk?adni albo brakuj?cym komponencie .NET/Windows Forms.
+- Brakuje pliku `RUT.ps1`, bo paczka została rozpakowana niepełnie.
+- Skrypt zatrzymał się na błędzie składni albo brakującym komponencie .NET/Windows Forms.
 
-## Podejrzenie brakuj?cych sk?adnik?w
+## Podejrzenie brakujących składników
 
 Uruchom:
 
 `start_RUT_diagnose.cmd`
 
-Ten plik nie uruchamia GUI. Sprawdza sk?adniki potrzebne do startu i wybrane sk?adniki opcjonalne. Wynik zapisuje do:
+Ten plik nie uruchamia GUI. Sprawdza składniki potrzebne do startu i wybrane składniki opcjonalne. Wynik zapisuje do:
 
 `logs\RUT_components_YYYYMMDD_HHMMSS.txt`
 
-W logu zobaczysz pozycje `OK`, `WARN` i `FAIL`. Najwa?niejsze dla samego startu s?:
+W logu zobaczysz pozycje `OK`, `WARN` i `FAIL`. Najważniejsze dla samego startu są:
 
 - `powershell.exe`,
 - `System.Windows.Forms`,
@@ -155,7 +170,9 @@ Od wersji `2026.05.18.7` okno naprawy:
 - próbuje `pnputil`, wymuszenia przez Windowsowe `newdev.dll` i pakietowego instalatora libwdi,
 - jeśli automatyka nie wystarczy, otwiera `zadig-2.9.exe`.
 
-W wersji `2026.05.18.8` RUT przed Zadigiem próbuje jeszcze wymusić sterownik przez systemowe `UpdateDriverForPlugAndPlayDevices`, więc w wielu przypadkach użytkownik nie musi nic klikać ręcznie.`n`nW Zadig wybierz `Options > List All Devices`, potem urządzenie DFU/STM32/OpenGD77/Retevis, ustaw sterownik `WinUSB` i kliknij `Install Driver` albo `Replace Driver`. Po zamknięciu Zadiga skrypt sprawdzi sterownik jeszcze raz.
+W wersji `2026.05.18.8` RUT przed Zadigiem próbuje jeszcze wymusić sterownik przez systemowe `UpdateDriverForPlugAndPlayDevices`, więc w wielu przypadkach użytkownik nie musi nic klikać ręcznie.
+
+W Zadig wybierz `Options > List All Devices`, potem urządzenie DFU/STM32/OpenGD77/Retevis, ustaw sterownik `WinUSB` i kliknij `Install Driver` albo `Replace Driver`. Po zamknięciu Zadiga skrypt sprawdzi sterownik jeszcze raz.
 
 ## Błąd: Nie znaleziono Pythona z biblioteka pyusb
 
